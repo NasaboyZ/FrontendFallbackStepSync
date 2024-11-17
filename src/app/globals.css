@@ -1,14 +1,44 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --white: #f8f7f6;
+  --brown-dark: #4e463a;
+  --brown-light: #837c6a;
+  --grey: #d9d9d9;
+  --red: #e03e29;
+  --green: #04d820;
+  --lieniargradiant: var(
+    --fade-red,
+    linear-gradient(
+      115deg,
+      rgba(217, 217, 217, 0.65) 2.84%,
+      rgba(224, 62, 41, 0.26) 96.69%
+    )
+  );
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
+} */
+
+@font-face {
+  font-family: "IBM Plex Sans";
+  src: url("./fonts/ibnsans/IBMPlexSans-Bold.ttf"),
+    url("./fonts/ibnsans/IBMPlexSans-BoldItalic.ttf"),
+    url("./fonts/ibnsans/IBMPlexSans-ExtraLight.ttf"),
+    url("./fonts/ibnsans/IBMPlexSans-ExtraLightItalic.ttf"),
+    url("./fonts/ibnsans/IBMPlexSans-Medium.ttf"),
+    url("./fonts/ibnsans/IBMPlexSans-MediumItalic.ttf"),
+    url("./fonts/ibnsans/IBMPlexSans-Regular.ttf"),
+    url("./fonts/ibnsans/IBMPlexSans-SemiBold.ttf");
 }
+/* @font-face {
+  font-family: "intern";
+
+  src: url ("./fonts/intern/Inter_18pt-Regular.ttf"),
+    url("./fonts/intern/Inter-VariableFont_opsz\,wght.ttf");
+} */
 
 html,
 body {
@@ -17,11 +47,17 @@ body {
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  color: var(--white);
+  background: var(--brown-dark);
+  font-family: var(--font-inter-regular), Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+body ::selection {
+  background-color: var(--red);
+  color: var(--white);
 }
 
 * {
@@ -35,8 +71,13 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
+  }
+} */
+@media (max-width: 768px) {
+  body {
+    padding: 1rem;
   }
 }

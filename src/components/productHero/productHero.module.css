@@ -1,0 +1,55 @@
+.productHeroWrapper {
+  background-color: var(--brown-dark);
+
+  margin: 2rem auto;
+  width: 100%;
+  height: auto;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.imageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  max-width: 100%;
+  height: auto;
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--white);
+}
+
+.description {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-top: 1rem;
+  font-family: var(--font-inter-regular);
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .gridContainer {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .imageContainer {
+    margin-bottom: 1.5rem;
+  }
+
+  .description {
+    font-size: 0.9rem;
+  }
+}
