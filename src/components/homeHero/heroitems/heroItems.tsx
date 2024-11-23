@@ -13,7 +13,6 @@ export default function HeroItems() {
   return (
     <>
       <div className={Style["hero_wrapper"]}>
-        {/* <h1 className={Style["hero_title"]}>Tracke deinen Erfolg</h1>a */}
         <TitelComponent
           style={titelStyle.PRIMARY}
           label={"Tracke deinen Erfolg"}
@@ -34,9 +33,8 @@ export default function HeroItems() {
           transition={{ duration: 0.5 }}
         >
           <Image
+            className={Style["image"]}
             src={iphonehintellinks}
-            width={500}
-            height={500}
             alt="Hinten Links Bild"
           />
         </motion.div>
@@ -48,9 +46,8 @@ export default function HeroItems() {
           transition={{ duration: 0.5 }}
         >
           <Image
+            className={Style["image"]}
             src={iphonehintenrechts}
-            width={490}
-            height={490}
             alt="Hinten Rechts Bild"
           />
         </motion.div>
@@ -63,8 +60,7 @@ export default function HeroItems() {
         >
           <Image
             src={iphonefront}
-            width={500}
-            height={500}
+            className={Style["image"]}
             alt="Vorderseite des Handys"
           />
         </motion.div>

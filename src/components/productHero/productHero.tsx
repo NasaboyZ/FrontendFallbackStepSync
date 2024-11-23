@@ -11,8 +11,6 @@ export default function ProductHero() {
           <div className={Style["imageContainer"]}>
             <Image
               src={iphoneLinks}
-              width={500}
-              height={500}
               alt="Iphone zeigt man der Gewichte stämmt"
               className={Style["image"]}
             />
